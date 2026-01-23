@@ -684,6 +684,15 @@
     display: block;
   }
 }
+.hamburger {
+  position: relative;
+  z-index: 2001;
+  pointer-events: auto;
+  touch-action: manipulation;
+}
+video {
+  pointer-events: none;
+}
 
 
     </style>
@@ -1285,14 +1294,16 @@
   const navLinks = document.querySelector('.nav-links');
 
   if (hamburger && navLinks) {
-    hamburger.addEventListener('click', () => {
+    const toggleMenu = () => {
       navLinks.classList.toggle('active');
-    });
+    };
+
+    hamburger.addEventListener('click', toggleMenu);
+    hamburger.addEventListener('touchstart', toggleMenu, { passive: true });
 
     document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-      });
+      link.addEventListener('click', () => navLinks.classList.remove('active'));
+      link.addEventListener('touchstart', () => navLinks.classList.remove('active'), { passive: true });
     });
   }
 </script>
