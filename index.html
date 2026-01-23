@@ -126,6 +126,34 @@
             scroll-margin-top: 70px;
         }
 
+        /* ANIMATIONS */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .delay-1 {
+            transition-delay: 0.1s;
+        }
+
+        .delay-2 {
+            transition-delay: 0.2s;
+        }
+
+        .delay-3 {
+            transition-delay: 0.3s;
+        }
+
+        .delay-4 {
+            transition-delay: 0.4s;
+        }
+
         /* HERO */
         .hero {
             position: relative;
@@ -589,12 +617,12 @@
     </section>
 
     <!-- CORE STRENGTHS -->
-    <section id="strengths">
+    <section id="strengths" class="reveal">
         <div class="container">
             <h2>Our Core Strengths</h2>
 
             <div class="grid-3">
-                <div class="card">
+                <div class="card reveal delay-1">
                     <img src="strengths-asset-management.jpg" class="image-block" alt="Asset Management">
                     <h3>1. Disciplined Asset Management & Long-Term Value Creation</h3>
                     <p>At GlobalVision, capital preservation comes before return generation.</p>
@@ -632,10 +660,10 @@
     </section>
 
     <!-- INVESTMENT PHILOSOPHY & RISK MANAGEMENT -->
-    <section id="philosophy" class="trust-section">
+    <section id="philosophy" class="trust-section reveal">
         <div class="container">
             <div class="philosophy-grid">
-                <div>
+                <div class="reveal delay-1">
                     <h2>Investment Philosophy</h2>
                     <p style="color: var(--accent); font-weight: 600;">The GlobalVision Alpha Approach: Capital
                         Preservation First.</p>
@@ -670,12 +698,12 @@
     </section>
 
     <!-- WHO WE SERVE -->
-    <section id="who-we-serve">
+    <section id="who-we-serve" class="reveal">
         <div class="container">
             <h2 style="text-align: center; margin-bottom: 60px;">Who We Serve</h2>
             <div class="grid-3" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
                 <!-- HNWIs -->
-                <div class="card" style="text-align: center;">
+                <div class="card reveal delay-1" style="text-align: center;">
                     <div class="icon-box">👤</div>
                     <h3>High-Net-Worth Individuals</h3>
                     <p style="font-size: 14px;">We partner with individuals seeking bespoke capital preservation
@@ -707,7 +735,7 @@
     </section>
 
     <!-- MID-PAGE CTA 1 -->
-    <section class="cta-banner">
+    <section class="cta-banner reveal">
         <div class="container">
             <h2>Ready to Secure Your Financial Legacy?</h2>
             <p>Our disciplined approach to wealth stewardship begins with a conversation. Let’s discuss how we can align
@@ -879,7 +907,7 @@
     </section>
 
     <!-- OUR LEADERSHIP -->
-    <section id="team">
+    <section id="team" class="reveal">
         <div class="container">
             <h2>Our Leadership</h2>
 
@@ -1074,6 +1102,21 @@
         function submitForm() {
             alert("Thank you for your interest. A GlobalVision advisor will reach out to you within 24 hours to schedule your consultation.");
         }
+
+        // Professional Scroll Animation Logic
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
 
     <footer>
