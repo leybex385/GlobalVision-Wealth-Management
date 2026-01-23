@@ -253,8 +253,67 @@
             margin: 4px 0 0;
         }
 
+        /* FOUNDER FOCUS */
+        .founder-hero {
+            margin-bottom: 60px;
+        }
+
+        .founder-title-group {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .founder-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid var(--accent);
+        }
+
+        .founder-headline h3 {
+            font-size: 36px;
+            margin: 0;
+            color: #fff;
+        }
+
+        .founder-tagline {
+            color: var(--accent);
+            font-size: 18px;
+            font-weight: 500;
+            margin-top: 8px;
+        }
+
+        .leader-card {
+            background: var(--dark-soft);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid transparent;
+            transition: border 0.3s;
+        }
+
+        .leader-card:hover {
+            border-color: var(--accent);
+        }
+
+        .leader-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
         /* Responsive */
         @media (max-width: 900px) {
+            .founder-title-group {
+                flex-direction: column;
+                text-align: center;
+            }
+
             .leadership-grid {
                 grid-template-columns: 1fr;
                 text-align: center;
@@ -321,6 +380,73 @@
 
         .btn-submit:hover {
             background: #dbc07d;
+        }
+
+        /* FOUNDER FOCUS */
+        .founder-section {
+            background: var(--dark-soft);
+            padding: 80px 40px;
+            border-radius: 8px;
+            margin-bottom: 60px;
+        }
+
+        .founder-header {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #2d3e50;
+            padding-bottom: 30px;
+        }
+
+        .founder-img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid var(--accent);
+        }
+
+        .founder-identity h3 {
+            font-size: 32px;
+            margin: 0;
+            color: var(--accent);
+        }
+
+        .founder-identity p {
+            font-size: 18px;
+            color: #fff;
+            margin: 5px 0 0;
+        }
+
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        /* TEAM GRID */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .leader-card {
+            background: #1a2635;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .leader-card img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 2px solid #2d3e50;
         }
 
         /* LISTS & LABELS */
@@ -741,61 +867,94 @@
     <!-- OUR LEADERSHIP -->
     <section id="team">
         <div class="container">
-            <h2>Core Team</h2>
-            <h3>Our Leadership</h3>
+            <h2>Our Leadership</h2>
 
-            <div class="leadership-grid">
-                <!-- LEFT TEXT: Roots & Education -->
-                <div class="leadership-text">
-                    <p style="color: var(--accent); font-weight: 600; margin-bottom: 12px;">The Visionary Mindset</p>
-                    <p>
-                        Ethan’s journey in global finance is rooted in a rigorous academic foundation. He earned his
-                        Master’s in Financial Mechanics from the <strong>National University of Singapore (NUS)</strong>
-                        in 2002, followed by an MBA from <strong>Harvard Business School</strong> in 2005.
-                    </p>
-                    <p>
-                        This blend of technical mechanics and strategic management allowed him to enter the global
-                        financial stage as a rising talent capable of navigating high-stakes market environments.
-                    </p>
+            <!-- Ethan Lim (Founder Focus) -->
+            <div class="founder-section">
+                <div class="founder-header">
+                    <img src="Ethan.jpg" alt="Ethan Lim" class="founder-img">
+                    <div class="founder-identity">
+                        <h3>Ethan Lim</h3>
+                        <p>Founder & Chief Investment Officer</p>
+                        <p
+                            style="font-size: 14px; color: var(--gray); margin-top: 10px; letter-spacing: 1px; text-transform: uppercase;">
+                            Asian Roots • Global Perspective • Institutional Discipline</p>
+                    </div>
                 </div>
 
-                <!-- CENTER IMAGE + NAME -->
-                <div class="leadership-center">
-                    <img src="Ethan.jpg" alt="Ethan Lim">
-                    <p class="leader-name"><strong>Ethan Lim</strong></p>
-                    <p class="leader-title">Founder & Chief Investment Officer</p>
-                </div>
+                <div class="leadership-grid">
+                    <div class="leadership-text">
+                        <p style="color: var(--accent); font-weight: 600; margin-bottom: 12px;">The Visionary Mindset
+                        </p>
+                        <p>
+                            Ethan’s journey in global finance is rooted in a rigorous academic foundation and deep ties
+                            to the Asian economic landscape. He earned his Master’s in Financial Mechanics from the
+                            <strong>National University of Singapore (NUS)</strong> in 2002, followed by an MBA from
+                            <strong>Harvard Business School</strong> in 2005.
+                        </p>
+                        <p>
+                            This unique background allows Ethan to serve as a vital bridge between East and
+                            West—combining the technical precision of Singaporean finance with the strategic foresight
+                            of American institutional management.
+                        </p>
+                    </div>
 
-                <!-- RIGHT TEXT: Career & Innovation -->
-                <div class="leadership-text">
-                    <p style="color: var(--accent); font-weight: 600; margin-bottom: 12px;">Institutional Roots &
-                        Innovation</p>
-                    <p>
-                        In 2008, Ethan joined <strong>Goldman Sachs</strong> as a Senior Analyst during the global
-                        financial crisis. His focus on capital preservation and gold market strategies was instrumental
-                        in helping the firm navigate through turbulent periods, securing a legacy of disciplined risk
-                        management.
-                    </p>
-                    <p>
-                        A pioneer in emerging finance, Ethan later led <strong>Blockchain Solutions</strong> for DBS
-                        Bank and Ripple Labs across Asia-Pacific, bridging traditional institutional banking with the
-                        future of digital assets and cross-border innovation.
-                    </p>
+                    <div class="leadership-text">
+                        <p style="color: var(--accent); font-weight: 600; margin-bottom: 12px;">Strategic Stewardship
+                        </p>
+                        <p>
+                            In 2008, Ethan joined <strong>Goldman Sachs</strong> as a Senior Analyst during the global
+                            financial crisis. His focus on capital preservation and gold market strategies was
+                            instrumental in helping the firm navigate through turbulent periods, securing a legacy of
+                            disciplined risk management.
+                        </p>
+                        <p>
+                            A pioneer in emerging finance, Ethan later led <strong>Blockchain Solutions</strong> for DBS
+                            Bank and Ripple Labs across Asia-Pacific, bridging traditional institutional banking with
+                            the future of digital assets and cross-border innovation.
+                        </p>
+                    </div>
                 </div>
             </div>
 
-            <h3 style="margin-top: 60px;">Investment & Advisory Team</h3>
+            <!-- KEY LEADERS -->
+            <h3 style="margin-top: 80px; margin-bottom: 40px; text-align: center;">Key Leadership Team</h3>
+            <div class="team-grid">
+                <!-- COO -->
+                <div class="leader-card">
+                    <img src="C:/Users/jahziel/.gemini/antigravity/brain/073ca7ee-f213-45ac-b8a9-5ab809f47290/uploaded_image_0_1769193714076.png"
+                        alt="David Vance">
+                    <h4>David Vance</h4>
+                    <p style="color: var(--accent); font-size: 14px; font-weight: 600;">Senior Partner & COO</p>
+                    <p style="font-size: 14px; margin-top: 15px;">With over 25 years of operational experience at
+                        <strong>Morgan Stanley</strong> and <strong>J.P. Morgan</strong>, David oversees the firm's
+                        global institutional infrastructure and risk execution frameworks.</p>
+                </div>
+
+                <!-- CFO -->
+                <div class="leader-card">
+                    <img src="C:/Users/jahziel/.gemini/antigravity/brain/073ca7ee-f213-45ac-b8a9-5ab809f47290/uploaded_image_1_1769193714076.png"
+                        alt="Elizabeth Hart">
+                    <h4>Elizabeth Hart</h4>
+                    <p style="color: var(--accent); font-size: 14px; font-weight: 600;">Chief Financial Officer</p>
+                    <p style="font-size: 14px; margin-top: 15px;">Formerly a Senior Wealth Strategist at
+                        <strong>HSBC</strong>, Elizabeth specializes in multi-jurisdictional tax structuring and
+                        regulatory compliance for ultra-high-net-worth global families.</p>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 80px;">The Professional Standard</h3>
             <div class="card">
-                <p>Our team consists of professionals with backgrounds in:</p>
+                <p>Our broader advisory team consists of professionals with backgrounds from:</p>
                 <ul class="content-list">
-                    <li>Global asset management firms</li>
-                    <li>Investment banks and financial institutions</li>
-                    <li>Risk analytics and portfolio modeling</li>
-                    <li>Compliance and regulatory frameworks</li>
+                    <li>Global asset management firms and private equity</li>
+                    <li>Tier-1 Investment Banks (Goldman Sachs, Morgan Stanley, HSBC)</li>
+                    <li>Sovereign wealth entities and regulatory frameworks</li>
+                    <li>Institutional-grade risk analytics and capital stewardship</li>
                 </ul>
                 <p>
-                    Each team member contributes deep expertise in their respective domain, ensuring that every
-                    investment decision is thoroughly evaluated from both opportunity and risk perspectives.
+                    Each representative is committed to the GlobalVision "Capital Preservation First" mandate, ensuring
+                    institutional-grade oversight across every client portfolio.
                 </p>
             </div>
         </div>
