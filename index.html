@@ -290,6 +290,26 @@
             margin-bottom: 16px;
         }
 
+        /* CTA BANNERS */
+        .cta-banner {
+            background: linear-gradient(rgba(12, 22, 34, 0.9), rgba(12, 22, 34, 0.9)), url('cta-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 24px;
+            text-align: center;
+            border-top: 1px solid var(--accent);
+            border-bottom: 1px solid var(--accent);
+        }
+
+        .cta-banner h2 {
+            margin-bottom: 24px;
+        }
+
+        .cta-banner p {
+            max-width: 700px;
+            margin: 0 auto 32px;
+        }
+
         /* PHILOSOPHY & RISK SECTION */
         .trust-section {
             background: #0e1a29;
@@ -461,6 +481,16 @@
         </div>
     </section>
 
+    <!-- MID-PAGE CTA 1 -->
+    <section class="cta-banner">
+        <div class="container">
+            <h2>Ready to Secure Your Financial Legacy?</h2>
+            <p>Our disciplined approach to wealth stewardship begins with a conversation. Let’s discuss how we can align
+                your global assets with your long-term goals.</p>
+            <a href="#contact" class="btn-cta">Request a Strategic Call</a>
+        </div>
+    </section>
+
     <section id="services">
         <div class="container">
             <h2>Our Services</h2>
@@ -582,6 +612,16 @@
             <p style="margin-top: 30px; font-style: italic; color: var(--gray);">
                 Our focus is not performance marketing, but consistent execution and trust.
             </p>
+        </div>
+    </section>
+
+    <!-- MID-PAGE CTA 2 -->
+    <section class="cta-banner" style="background: var(--dark-soft);">
+        <div class="container">
+            <h2>Tailored Portfolio Strategy</h2>
+            <p>Every individual’s financial situation is unique. We provide a complimentary initial review to determine
+                how our institutional framework can optimize your specific holdings.</p>
+            <a href="#contact" class="btn-cta">Schedule Your Strategy Review</a>
         </div>
     </section>
 
@@ -715,18 +755,20 @@
     <!-- CONTACT -->
     <section id="contact">
         <div class="container">
-            <h2>Contact Us</h2>
-            <h3>Get in Touch</h3>
+            <h2>Strategic Consultation</h2>
+            <h3>Request an Initial Discussion</h3>
 
             <div class="contact-grid">
                 <div>
                     <img src="contact-global-office.jpg" class="image-block" alt="Global Office Contact">
-                    <p>For general inquiries or partnership discussions, please contact us:</p>
+                    <p>GlobalVision provides institutional-grade wealth advisory by invitation or appointment. To begin
+                        a focused dialogue about your capital, please reach out to our team.</p>
                     <p><strong>📍 Offices:</strong> Singapore | Hong Kong | Global</p>
                     <p><strong>📧 Email:</strong> info@globalvisionwm.com</p>
-                    <p style="margin-top: 20px; color: var(--accent);"><strong>📞 By appointment only</strong></p>
-                    <p style="margin-top: 20px; font-style: italic;">We believe meaningful conversations begin with
-                        trust and clarity.</p>
+                    <p style="margin-top: 20px; color: var(--accent);"><strong>📞 Private Advisory — By Appointment
+                            Only</strong></p>
+                    <p style="margin-top: 20px; font-style: italic;">We believe that the most successful lasting
+                        partnerships are built on a foundation of mutual trust and strategic alignment.</p>
                 </div>
 
                 <div class="contact-form">
@@ -739,10 +781,22 @@
                         <input type="email" placeholder="your@email.com">
                     </div>
                     <div class="form-group">
-                        <label>Message</label>
-                        <textarea rows="5" placeholder="How can we help you?"></textarea>
+                        <label>Preferred Area of Discussion</label>
+                        <select
+                            style="width: 100%; padding: 12px; background: #1a2635; border: 1px solid #2d3e50; border-radius: 4px; color: #fff; font-family: inherit;">
+                            <option>Wealth Management & Portfolio Advisory</option>
+                            <option>Global Asset Allocation</option>
+                            <option>Digital Asset & Emerging Finance</option>
+                            <option>Family Office Advisory</option>
+                            <option>Other / General Inquiry</option>
+                        </select>
                     </div>
-                    <button class="btn-submit" onclick="submitForm()">Submit Request</button>
+                    <div class="form-group">
+                        <label>Message / Context</label>
+                        <textarea rows="5"
+                            placeholder="Briefly describe your objectives to help us prepare for our discussion."></textarea>
+                    </div>
+                    <button class="btn-submit" onclick="submitForm()">Submit Consultation Request</button>
                 </div>
             </div>
         </div>
