@@ -149,55 +149,6 @@
   }
 }
 
-/* PHILANTHROPY SECTION */
-.philanthropy-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:0;
-}
-
-.philanthropy-item{
-  position:relative;
-  height:420px;
-  overflow:hidden;
-}
-
-.philanthropy-item img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.philanthropy-overlay{
-  position:absolute;
-  inset:0;
-  background:rgba(12,22,34,0.55);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:32px;
-}
-
-.philanthropy-overlay h2{
-  margin-bottom:12px;
-}
-
-.philanthropy-overlay p{
-  max-width:520px;
-  margin:auto;
-}
-
-/* Mobile */
-@media (max-width: 900px){
-  .philanthropy-grid{
-    grid-template-columns:1fr;
-  }
-
-  .philanthropy-item{
-    height:320px;
-  }
-}
 
   </style>
 </head>
@@ -428,50 +379,14 @@
 
 <!-- PHILANTHROPY -->
 <section>
-  <div class="philanthropy-grid">
-
-    <div class="philanthropy-item">
-      <img src="image/philanthropy_1.jpg" alt="Education Support">
-      <div class="philanthropy-overlay">
-        <div>
-          <h2>Philanthropy & Responsibility</h2>
-          <p>
-            We believe long-term capital stewardship includes social responsibility.
-            GlobalVision supports initiatives in education, healthcare, and community
-            development through structured philanthropic engagement.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="philanthropy-item">
-      <img src="image/philanthropy_2.jpg" alt="Healthcare Support">
-      <div class="philanthropy-overlay">
-        <div>
-          <h2>Philanthropy & Responsibility</h2>
-          <p>
-            We believe long-term capital stewardship includes social responsibility.
-            GlobalVision supports initiatives in education, healthcare, and community
-            development through structured philanthropic engagement.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="philanthropy-item">
-      <img src="image/philanthropy_3.jpg" alt="Community Development">
-      <div class="philanthropy-overlay">
-        <div>
-          <h2>Philanthropy & Responsibility</h2>
-          <p>
-            We believe long-term capital stewardship includes social responsibility.
-            GlobalVision supports initiatives in education, healthcare, and community
-            development through structured philanthropic engagement.
-          </p>
-        </div>
-      </div>
-    </div>
-
+  <div class="container">
+    <h2>Philanthropy & Responsibility</h2>
+    <img src="image/philanthropy-community.jpg" class="image-block" alt="Philanthropy & Community">
+    <p>
+      We believe long-term capital stewardship includes social responsibility.
+      GlobalVision supports initiatives in education, healthcare, and community
+      development through structured philanthropic engagement.
+    </p>
   </div>
 </section>
 
