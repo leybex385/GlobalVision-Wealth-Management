@@ -37,6 +37,8 @@
             background: var(--dark);
             color: #fff;
             line-height: 1.7;
+            padding-top: 70px;
+            /* Offset for sticky navbar */
         }
 
         h1,
@@ -57,6 +59,71 @@
         .container {
             max-width: var(--max-width);
             margin: auto;
+        }
+
+        /* NAVIGATION */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background: rgba(12, 22, 34, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid #1e2a3a;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .nav-brand {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--accent);
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        @media (max-width: 900px) {
+            .nav-links {
+                display: none;
+                /* Simple mobile approach: hide links for now or use a hamburger */
+            }
+        }
+
+        /* SCROLL OFFSET */
+        section {
+            scroll-margin-top: 70px;
         }
 
         /* HERO */
@@ -342,6 +409,21 @@
 </head>
 
 <body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-brand">GlobalVision Wealth Management</a>
+            <ul class="nav-links">
+                <li><a href="#strengths">Strengths</a></li>
+                <li><a href="#philosophy">Philosophy</a></li>
+                <li><a href="#who-we-serve">Who We Serve</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Consultation</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <!-- HERO -->
     <section class="hero">
