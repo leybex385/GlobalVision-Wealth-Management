@@ -572,6 +572,42 @@
             max-width: 700px;
             margin: 0 auto 32px;
         }
+        /* VIDEO CTA SECTION */
+.cta-video {
+    position: relative;
+    height: 420px;
+    overflow: hidden;
+}
+
+.cta-video video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(8px);
+    opacity: 0.45;
+    transform: scale(1.1); /* prevents blur edges */
+}
+
+.cta-overlay {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: rgba(12, 22, 34, 0.55); /* elegant dark overlay */
+}
+
+.cta-overlay h2 {
+    margin-bottom: 20px;
+}
+
+.cta-overlay p {
+    max-width: 700px;
+    margin: 0 auto 32px;
+}
 
         /* PHILOSOPHY & RISK SECTION */
         .trust-section {
@@ -760,14 +796,23 @@
     </section>
 
     <!-- MID-PAGE CTA 1 -->
-    <section class="cta-banner reveal">
+    <section class="cta-video reveal">
+    <video autoplay muted loop playsinline>
+        <source src="video/readytosecure.mp4" type="video/mp4">
+    </video>
+
+    <div class="cta-overlay">
         <div class="container">
             <h2>Ready to Secure Your Financial Legacy?</h2>
-            <p>Our disciplined approach to wealth stewardship begins with a conversation. Let’s discuss how we can align
-                your global assets with your long-term goals.</p>
+            <p>
+                Our disciplined approach to wealth stewardship begins with a conversation.
+                Let’s discuss how we can align your global assets with your long-term goals.
+            </p>
             <a href="#contact" class="btn-cta">Request a Strategic Call</a>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <section id="services">
         <div class="container">
