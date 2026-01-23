@@ -173,6 +173,20 @@
             background: var(--dark-soft);
             padding: 32px;
             border-radius: 8px;
+            height: 100%;
+            /* Height balance */
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        @media (max-width: 1000px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .image-block {
@@ -704,9 +718,9 @@
 
     <section id="services">
         <div class="container">
-            <h2>Our Services</h2>
+            <h2 style="text-align: center; margin-bottom: 60px;">Our Services</h2>
 
-            <div class="grid-3">
+            <div class="services-grid">
                 <!-- Service 1 -->
                 <div class="card">
                     <img src="services-portfolio-management.jpg" class="image-block" alt="Portfolio Management">
@@ -928,7 +942,8 @@
                     <p style="color: var(--accent); font-size: 14px; font-weight: 600;">Senior Partner & COO</p>
                     <p style="font-size: 14px; margin-top: 15px;">With over 25 years of operational experience at
                         <strong>Morgan Stanley</strong> and <strong>J.P. Morgan</strong>, David oversees the firm's
-                        global institutional infrastructure and risk execution frameworks.</p>
+                        global institutional infrastructure and risk execution frameworks.
+                    </p>
                 </div>
 
                 <!-- CFO -->
@@ -939,7 +954,8 @@
                     <p style="color: var(--accent); font-size: 14px; font-weight: 600;">Chief Financial Officer</p>
                     <p style="font-size: 14px; margin-top: 15px;">Formerly a Senior Wealth Strategist at
                         <strong>HSBC</strong>, Elizabeth specializes in multi-jurisdictional tax structuring and
-                        regulatory compliance for ultra-high-net-worth global families.</p>
+                        regulatory compliance for ultra-high-net-worth global families.
+                    </p>
                 </div>
             </div>
 
