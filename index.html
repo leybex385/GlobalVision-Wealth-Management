@@ -444,22 +444,39 @@
             border: 2px solid var(--accent);
         }
 
+        .founder-content {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
         .founder-identity h3 {
-            font-size: 42px;
+            font-size: 38px;
             margin: 0;
             color: var(--accent);
         }
 
         .founder-identity p {
-            font-size: 22px;
+            font-size: 20px;
             color: #fff;
-            margin: 10px 0 20px;
+            margin: 8px 0 0;
             font-weight: 500;
         }
 
-        .founder-text-content {
-            display: grid;
-            gap: 30px;
+        .founder-bio {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #d0d4dc;
+        }
+
+        .founder-bio p {
+            margin-bottom: 20px;
+        }
+
+        .achievement-highlight {
+            border-left: 2px solid var(--accent);
+            padding-left: 20px;
+            margin: 10px 0;
         }
 
         /* TEAM GRID - 2 COLUMNS FOR IMPACT */
@@ -921,48 +938,44 @@
 
             <!-- Ethan Lim (Founder Focus) -->
             <div class="founder-section">
-                <div class="founder-header">
-                    <img src="Ethan.jpg" alt="Ethan Lim" class="founder-img">
+                <img src="Ethan.jpg" alt="Ethan Lim" class="founder-img">
+                <div class="founder-content">
                     <div class="founder-identity">
                         <h3>Ethan Lim</h3>
                         <p>Founder & Chief Investment Officer</p>
                         <p
-                            style="font-size: 14px; color: var(--gray); margin-top: 10px; letter-spacing: 1px; text-transform: uppercase;">
+                            style="font-size: 13px; color: var(--gray); margin-top: 10px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600;">
                             Asian Roots • Global Perspective • Institutional Discipline</p>
                     </div>
-                </div>
 
-                <div class="leadership-grid">
-                    <div class="leadership-text">
-                        <p style="color: var(--accent); font-weight: 600; margin-bottom: 12px;">The Visionary Mindset
-                        </p>
+                    <div class="founder-bio">
                         <p>
                             Ethan’s journey in global finance is rooted in a rigorous academic foundation and deep ties
                             to the Asian economic landscape. He earned his Master’s in Financial Mechanics from the
                             <strong>National University of Singapore (NUS)</strong> in 2002, followed by an MBA from
-                            <strong>Harvard Business School</strong> in 2005.
+                            <strong>Harvard Business School</strong> in 2005. This unique background allows Ethan to
+                            serve as a vital bridge between East and West—combining the technical precision of
+                            Singaporean finance with the strategic foresight of American institutional management.
                         </p>
                         <p>
-                            This unique background allows Ethan to serve as a vital bridge between East and
-                            West—combining the technical precision of Singaporean finance with the strategic foresight
-                            of American institutional management.
+                            In 2008, Ethan was at the epicenter of the global financial crisis as a Senior Analyst at
+                            <strong>Goldman Sachs</strong>. His focus on capital preservation and gold market strategies
+                            was instrumental in helping the firm navigate through turbulent periods, securing a legacy
+                            of
+                            disciplined risk management that he continues to apply today.
                         </p>
-                    </div>
-
-                    <div class="leadership-text">
-                        <p style="color: var(--accent); font-weight: 600; margin-bottom: 12px;">Strategic Stewardship
-                        </p>
-                        <p>
-                            In 2008, Ethan joined <strong>Goldman Sachs</strong> as a Senior Analyst during the global
-                            financial crisis. His focus on capital preservation and gold market strategies was
-                            instrumental in helping the firm navigate through turbulent periods, securing a legacy of
-                            disciplined risk management.
-                        </p>
-                        <p>
-                            A pioneer in emerging finance, Ethan later led <strong>Blockchain Solutions</strong> for DBS
-                            Bank and Ripple Labs across Asia-Pacific, bridging traditional institutional banking with
-                            the future of digital assets and cross-border innovation.
-                        </p>
+                        <div class="achievement-highlight">
+                            <p style="color: #fff; font-weight: 600; font-size: 16px; margin-bottom: 8px;">Key
+                                Milestones & Achievements</p>
+                            <p style="margin-bottom: 0;">
+                                A pioneer in emerging finance, Ethan later led <strong>Blockchain
+                                    Solutions</strong> for DBS Bank and Ripple Labs across Asia-Pacific. Most notably,
+                                he
+                                guided the first institutional-grade <strong>$500M digital asset liquidity
+                                    transition</strong> for a major regional bank, bridging traditional banking
+                                infrastructure with the future of digital capital.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
