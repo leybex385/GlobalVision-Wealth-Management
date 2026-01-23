@@ -247,7 +247,7 @@
             background: #dbc07d;
         }
 
-        /* LISTS */
+        /* LISTS & LABELS */
         .content-list {
             list-style: none;
             padding: 0;
@@ -267,6 +267,44 @@
             left: 0;
             color: var(--accent);
             font-weight: bold;
+        }
+
+        .service-label {
+            display: inline-block;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .service-text {
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        /* PHILOSOPHY & RISK SECTION */
+        .trust-section {
+            background: #0e1a29;
+            border-top: 1px solid #1e2a3a;
+            border-bottom: 1px solid #1e2a3a;
+        }
+
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 60px;
+        }
+
+        .disclaimer-text {
+            font-size: 12px;
+            color: #5a6679;
+            text-align: left;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #1e2a3a;
+            line-height: 1.6;
         }
 
         @media (max-width: 800px) {
@@ -342,51 +380,123 @@
         </div>
     </section>
 
-    <!-- SERVICES -->
+    <!-- INVESTMENT PHILOSOPHY & RISK MANAGEMENT -->
+    <section id="philosophy" class="trust-section">
+        <div class="container">
+            <div class="philosophy-grid">
+                <div>
+                    <h2>Investment Philosophy</h2>
+                    <p style="color: var(--accent); font-weight: 600;">The GlobalVision Alpha Approach: Capital
+                        Preservation First.</p>
+                    <p>Our methodology is rooted in the belief that long-term outperformance is not achieved through
+                        aggressive speculation, but through the consistent avoidance of permanent capital loss.</p>
+                    <ul class="content-list">
+                        <li><strong>Fundamental Stewardship:</strong> We ignore market sentiment and focus strictly on
+                            underlying structural value and cash-flow resilience.</li>
+                        <li><strong>Asymmetric Risk-Reward:</strong> We seek opportunities where the potential for
+                            upside is significantly higher than the quantified downside risk.</li>
+                        <li><strong>Systematic Execution:</strong> Our investment process is repeatable, data-driven,
+                            and designed to remove emotional bias from decision-making.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Institutional Risk Principles</h2>
+                    <p style="color: var(--accent); font-weight: 600;">Risk is not volatility; it is the risk of ruin.
+                    </p>
+                    <p>We apply the same rigorous risk controls used by the world's largest institutional asset managers
+                        to private client wealth.</p>
+                    <ul class="content-list">
+                        <li><strong>Multi-Scenario Stress Testing:</strong> Portfolios are stress-tested against 50+
+                            years of historical market crises and hypothetical "black swan" events.</li>
+                        <li><strong>Dynamic Liquidity Management:</strong> We ensure that every portfolio maintains a
+                            tiered liquidity structure to provide capital access even in stressed environments.</li>
+                        <li><strong>Counterparty Rigor:</strong> We only partner with Tier-1 global custodians and
+                            institutional counterparties, ensuring the highest level of asset safety.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="services">
         <div class="container">
             <h2>Our Services</h2>
-            <h3>Wealth Management & Portfolio Advisory</h3>
 
             <div class="grid-3">
+                <!-- Service 1 -->
                 <div class="card">
                     <img src="services-portfolio-management.jpg" class="image-block" alt="Portfolio Management">
                     <h3>Wealth Management & Portfolio Advisory</h3>
-                    <ul class="content-list">
-                        <li>Customized portfolio construction</li>
-                        <li>Risk-based asset allocation</li>
-                        <li>Ongoing portfolio monitoring and rebalancing</li>
-                    </ul>
+                    <div>
+                        <span class="service-label">The Challenge</span>
+                        <p class="service-text">Clients often face fragmented asset oversight and inconsistent
+                            investment strategies across multiple accounts.</p>
+
+                        <span class="service-label">Our Solution</span>
+                        <p class="service-text">We provide a cohesive, risk-based asset allocation and ongoing
+                            rebalancing, centralizing management for maximum clarity.</p>
+
+                        <span class="service-label">The Advantage</span>
+                        <p class="service-text">Disciplined execution built on institutional-grade oversight and
+                            rigorous capital stewardship.</p>
+                    </div>
                 </div>
 
+                <!-- Service 2 -->
                 <div class="card">
                     <img src="services-asset-allocation.jpg" class="image-block" alt="Global Asset Allocation">
                     <h3>Global Asset Allocation</h3>
-                    <ul class="content-list">
-                        <li>Equities, fixed income, and alternative investments</li>
-                        <li>Cross-border investment strategies</li>
-                        <li>Currency and macro risk considerations</li>
-                    </ul>
+                    <div>
+                        <span class="service-label">The Challenge</span>
+                        <p class="service-text">Navigating complex cross-border regulations and currency risks requires
+                            deep international expertise.</p>
+
+                        <span class="service-label">Our Solution</span>
+                        <p class="service-text">Strategic allocation across global equities, fixed income, and
+                            alternatives, designed for cross-border optimization.</p>
+
+                        <span class="service-label">The Advantage</span>
+                        <p class="service-text">Extensive experience in key financial hubs including Singapore, Hong
+                            Kong, London, and New York.</p>
+                    </div>
                 </div>
 
+                <!-- Service 3 -->
                 <div class="card">
                     <img src="services-risk-management.jpg" class="image-block" alt="Digital Advisory">
                     <h3>Digital Asset & Emerging Finance Advisory</h3>
-                    <ul class="content-list">
-                        <li>Strategic exposure to digital assets</li>
-                        <li>Infrastructure-focused blockchain investments</li>
-                        <li>Risk-managed integration with traditional portfolios</li>
-                    </ul>
+                    <div>
+                        <span class="service-label">The Challenge</span>
+                        <p class="service-text">High volatility and the lack of robust institutional infrastructure make
+                            digital asset entry high-risk for many.</p>
+
+                        <span class="service-label">Our Solution</span>
+                        <p class="service-text">We offer strategic, risk-managed exposure to blockchain infrastructure
+                            and digital assets within a diversified framework.</p>
+
+                        <span class="service-label">The Advantage</span>
+                        <p class="service-text">The ability to bridge traditional finance with digital innovation under
+                            strict governance standards.</p>
+                    </div>
                 </div>
 
+                <!-- Service 4 -->
                 <div class="card">
                     <img src="strengths-asset-management.jpg" class="image-block" alt="Family Office">
                     <h3>Family Office & High-Net-Worth Advisory</h3>
-                    <ul class="content-list">
-                        <li>Long-term wealth structuring</li>
-                        <li>Intergenerational capital planning</li>
-                        <li>Governance and investment oversight</li>
-                    </ul>
+                    <div>
+                        <span class="service-label">The Challenge</span>
+                        <p class="service-text">Managing intergenerational wealth transition requires more than just
+                            performance—it requires structural clarity.</p>
+
+                        <span class="service-label">Our Solution</span>
+                        <p class="service-text">Comprehensive wealth structuring, intergenerational planning, and
+                            persistent investment oversight.</p>
+
+                        <span class="service-label">The Advantage</span>
+                        <p class="service-text">A legacy-focused approach built on long-term perspective and
+                            multi-generational trust.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -412,17 +522,26 @@
             <div class="grid-3">
                 <div class="card">
                     <img src="case-long-term-capital-growth.jpg" class="image-block" alt="Defensive Portfolio">
-                    <p>Designing defensive portfolios during market downturns</p>
+                    <p><strong>Scenario: Market Volatility Shelter</strong></p>
+                    <p style="font-size: 14px;">Successfully designed and executed defensive hedging strategies for a
+                        family office during high-inflation cycles, preserving purchasing power while peers saw
+                        double-digit drawdowns.</p>
                 </div>
 
                 <div class="card">
                     <img src="case-multi-asset-portfolio.jpg" class="image-block" alt="Alternative Assets">
-                    <p>Integrating alternative and digital assets into conservative portfolios</p>
+                    <p><strong>Scenario: Institutional Diversification</strong></p>
+                    <p style="font-size: 14px;">Integrated private equity and institutional-grade digital asset exposure
+                        into a conservative portfolio, improving the overall Sharpe ratio and lowering correlation to
+                        public equities.</p>
                 </div>
 
                 <div class="card">
                     <img src="2.jpg" class="image-block" alt="Liquidity Transition">
-                    <p>Supporting clients through major liquidity and allocation transitions</p>
+                    <p><strong>Scenario: Post-Exit Capital Transition</strong></p>
+                    <p style="font-size: 14px;">Managed the complex transition of $100M+ in liquidity for an
+                        entrepreneur following a corporate exit, balancing tax-efficient staging with global multi-asset
+                        allocation.</p>
                 </div>
             </div>
 
@@ -602,7 +721,21 @@
     </script>
 
     <footer>
-        © GlobalVision Capital Management. All rights reserved.
+        <div class="container">
+            <p>© 2024 GlobalVision Capital Management. All rights reserved.</p>
+            <div class="disclaimer-text">
+                <p><strong>Compliance & Regulatory Disclosures:</strong></p>
+                <p>GlobalVision Wealth Management refers to the wealth management and investment advisory activities
+                    provided by our respective regional affiliates. Investment advisory services are only provided to
+                    institutional, professional, or accredited investors as defined by local regulations in each
+                    jurisdiction. This website is for informational purposes only and does not constitute a
+                    solicitation, recommendation, or offer to buy or sell any security, financial instrument, or
+                    service. Investment involves risk, including the possible loss of principal. Past performance is not
+                    a guarantee of future results. Information on this site is not intended for distribution to, or use
+                    by, any person in any country or jurisdiction where such distribution or use would be contrary to
+                    local law or regulation.</p>
+            </div>
+        </div>
     </footer>
 
 </body>
