@@ -101,10 +101,10 @@
       color:var(--gray);
       border-top:1px solid #1e2a3a;
     }
-    /* LEADERSHIP 3-COLUMN LAYOUT */
+    /* LEADERSHIP – REFINED EXECUTIVE LAYOUT */
 .leadership-grid{
   display:grid;
-  grid-template-columns: 1fr 380px 1fr;
+  grid-template-columns: 1fr 360px 1fr;
   gap:40px;
   align-items:center;
 }
@@ -115,11 +115,26 @@
   border-radius:8px;
 }
 
+.leadership-center{
+  text-align:center;
+}
+
 .leadership-center img{
   width:100%;
-  height:460px;
+  height:440px;
   object-fit:cover;
   border-radius:8px;
+  margin-bottom:16px;
+}
+
+.leader-name{
+  font-size:20px;
+  margin:0;
+}
+
+.leader-title{
+  color:var(--gray);
+  margin:4px 0 0;
 }
 
 /* Responsive */
@@ -133,6 +148,7 @@
     height:360px;
   }
 }
+
 
   </style>
 </head>
@@ -212,7 +228,7 @@
   </div>
 </section>
   
-<!-- CORE TEAM -->
+<!-- OUR LEADERSHIP -->
 <section>
   <div class="container">
     <h2>Our Leadership</h2>
@@ -221,16 +237,23 @@
 
       <!-- LEFT TEXT -->
       <div class="leadership-text">
-        <h3>Ethan Lim</h3>
-        <p><strong>Founder & Chief Investment Officer</strong></p>
-
         <p>
           With over three decades of experience in global asset management, risk
           management, and portfolio construction, Ethan has held senior roles at
           international financial institutions across Singapore, Hong Kong,
           London, and New York.
         </p>
+      </div>
 
+      <!-- CENTER IMAGE + NAME -->
+      <div class="leadership-center">
+        <img src="image/Ethan.jpg" alt="Ethan Lim">
+        <p class="leader-name"><strong>Ethan Lim</strong></p>
+        <p class="leader-title">Founder & Chief Investment Officer</p>
+      </div>
+
+      <!-- RIGHT TEXT -->
+      <div class="leadership-text">
         <p>
           His expertise spans institutional asset allocation, portfolio risk
           management, strategic investment advisory, and digital asset integration.
@@ -239,31 +262,30 @@
         </p>
       </div>
 
-      <!-- CENTER IMAGE -->
-      <div class="leadership-center">
-        <img src="image/Ethan.jpg" alt="Ethan Lim">
-      </div>
-
-      <!-- RIGHT TEXT -->
-      <div class="leadership-text">
-        <h3>Investment & Advisory Team</h3>
-
-        <p>
-          Our team consists of professionals with backgrounds in global asset
-          management firms, investment banks, risk analytics, and regulatory
-          frameworks.
-        </p>
-
-        <p>
-          Each investment decision is evaluated through rigorous analysis,
-          scenario testing, and governance standards to ensure alignment with
-          client objectives and risk profiles.
-        </p>
-      </div>
-
     </div>
   </div>
 </section>
+<!-- INVESTMENT & ADVISORY TEAM -->
+<section>
+  <div class="container">
+    <h2>Investment & Advisory Team</h2>
+
+    <div class="card">
+      <p>
+        Our team consists of professionals with backgrounds in global asset
+        management firms, investment banks, risk analytics, and regulatory
+        frameworks.
+      </p>
+
+      <p>
+        Each investment decision is evaluated through rigorous analysis,
+        scenario testing, and governance standards to ensure alignment with
+        client objectives and risk profiles.
+      </p>
+    </div>
+  </div>
+</section>
+
 
 
 <!-- SERVICES -->
