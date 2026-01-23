@@ -149,6 +149,55 @@
   }
 }
 
+/* PHILANTHROPY – FULL WIDTH IMAGE STRIP */
+.philanthropy-wrapper{
+  position:relative;
+}
+
+.philanthropy-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  height:420px;
+}
+
+.philanthropy-grid img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* Unified overlay */
+.philanthropy-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(12,22,34,0.55);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:32px;
+}
+
+.philanthropy-overlay h2{
+  margin-bottom:12px;
+}
+
+.philanthropy-overlay p{
+  max-width:640px;
+  margin:auto;
+}
+
+/* Mobile */
+@media (max-width: 900px){
+  .philanthropy-grid{
+    grid-template-columns:1fr;
+    height:auto;
+  }
+
+  .philanthropy-grid img{
+    height:260px;
+  }
+}
 
   </style>
 </head>
@@ -379,16 +428,30 @@
 
 <!-- PHILANTHROPY -->
 <section>
-  <div class="container">
-    <h2>Philanthropy & Responsibility</h2>
-    <img src="image/philanthropy-community.jpg" class="image-block" alt="Philanthropy & Community">
-    <p>
-      We believe long-term capital stewardship includes social responsibility.
-      GlobalVision supports initiatives in education, healthcare, and community
-      development through structured philanthropic engagement.
-    </p>
+  <div class="philanthropy-wrapper">
+
+    <!-- Images -->
+    <div class="philanthropy-grid">
+      <img src="image/philanthropy_1.jpg" alt="Education">
+      <img src="image/philanthropy_2.jpg" alt="Healthcare">
+      <img src="image/philanthropy_3.jpg" alt="Community">
+    </div>
+
+    <!-- Unified Text Overlay -->
+    <div class="philanthropy-overlay">
+      <div>
+        <h2>Philanthropy & Responsibility</h2>
+        <p>
+          We believe long-term capital stewardship includes social responsibility.
+          GlobalVision supports initiatives in education, healthcare, and community
+          development through structured philanthropic engagement.
+        </p>
+      </div>
+    </div>
+
   </div>
 </section>
+
 
 <!-- CAREERS -->
 <section>
