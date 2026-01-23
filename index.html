@@ -149,97 +149,6 @@
   }
 }
 
-/* PHILANTHROPY – HIDDEN NAV */
-.philanthropy-slider{
-  position:relative;
-  height:420px;
-  overflow:hidden;
-}
-
-.philanthropy-slide{
-  position:absolute;
-  inset:0;
-  opacity:0;
-  transition:opacity 0.6s ease;
-}
-
-.philanthropy-slide.active{
-  opacity:1;
-  z-index:1;
-}
-
-.philanthropy-slide img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.philanthropy-overlay{
-  position:absolute;
-  inset:0;
-  background:rgba(12,22,34,0.55);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:32px;
-}
-
-.philanthropy-overlay p{
-  max-width:620px;
-  margin:auto;
-}
-
-/* Navigation (hidden by default) */
-.philanthropy-nav{
-  position:absolute;
-  inset:0;
-  pointer-events:none;
-  opacity:0;
-  transition:opacity 0.3s ease;
-}
-
-.philanthropy-slider:hover .philanthropy-nav{
-  opacity:1;
-  pointer-events:auto;
-}
-
-/* Arrows */
-.philanthropy-arrow{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  font-size:28px;
-  cursor:pointer;
-  padding:12px;
-  user-select:none;
-}
-
-.philanthropy-arrow.left{ left:16px; }
-.philanthropy-arrow.right{ right:16px; }
-
-/* Dots */
-.philanthropy-dots{
-  position:absolute;
-  bottom:20px;
-  left:50%;
-  transform:translateX(-50%);
-  display:flex;
-  gap:10px;
-}
-
-.philanthropy-dot{
-  width:10px;
-  height:10px;
-  border-radius:50%;
-  background:#fff;
-  opacity:0.4;
-  cursor:pointer;
-}
-
-.philanthropy-dot.active{
-  opacity:1;
-}
 
   </style>
 </head>
@@ -470,47 +379,16 @@
 
 <!-- PHILANTHROPY -->
 <section>
-  <div class="philanthropy-slider">
-
-    <div class="philanthropy-slide active">
-      <img src="image/philanthropy_1.jpg" alt="Education">
-    </div>
-
-    <div class="philanthropy-slide">
-      <img src="image/philanthropy_2.jpg" alt="Healthcare">
-    </div>
-
-    <div class="philanthropy-slide">
-      <img src="image/philanthropy_3.jpg" alt="Community">
-    </div>
-
-    <!-- Text Overlay -->
-    <div class="philanthropy-overlay">
-      <div>
-        <h2>Philanthropy & Responsibility</h2>
-        <p>
-          We believe long-term capital stewardship includes social responsibility.
-          GlobalVision supports initiatives in education, healthcare, and community
-          development through structured philanthropic engagement.
-        </p>
-      </div>
-    </div>
-
-    <!-- Hidden Navigation -->
-    <div class="philanthropy-nav">
-      <div class="philanthropy-arrow left" onclick="changeSlide(-1)">‹</div>
-      <div class="philanthropy-arrow right" onclick="changeSlide(1)">›</div>
-
-      <div class="philanthropy-dots">
-        <div class="philanthropy-dot active" onclick="goToSlide(0)"></div>
-        <div class="philanthropy-dot" onclick="goToSlide(1)"></div>
-        <div class="philanthropy-dot" onclick="goToSlide(2)"></div>
-      </div>
-    </div>
-
+  <div class="container">
+    <h2>Philanthropy & Responsibility</h2>
+    <img src="image/philanthropy-community.jpg" class="image-block" alt="Philanthropy & Community">
+    <p>
+      We believe long-term capital stewardship includes social responsibility.
+      GlobalVision supports initiatives in education, healthcare, and community
+      development through structured philanthropic engagement.
+    </p>
   </div>
 </section>
-
 
 <!-- CAREERS -->
 <section>
@@ -539,28 +417,6 @@
 <footer>
   © GlobalVision Capital Management. All rights reserved.
 </footer>
-<script>
-let currentSlide = 0;
-const slides = document.querySelectorAll('.philanthropy-slide');
-const dots = document.querySelectorAll('.philanthropy-dot');
-
-function showSlide(index){
-  slides.forEach(s => s.classList.remove('active'));
-  dots.forEach(d => d.classList.remove('active'));
-
-  currentSlide = (index + slides.length) % slides.length;
-  slides[currentSlide].classList.add('active');
-  dots[currentSlide].classList.add('active');
-}
-
-function changeSlide(dir){
-  showSlide(currentSlide + dir);
-}
-
-function goToSlide(index){
-  showSlide(index);
-}
-</script>
 
 </body>
 </html>
