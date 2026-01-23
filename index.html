@@ -1,423 +1,610 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>GlobalVision Wealth Management</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>GlobalVision Wealth Management</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Open Graph / Social Preview -->
-  <meta property="og:title" content="GlobalVision Wealth Management" />
-  <meta property="og:description" content="Strategic wealth management and growth-oriented investment with a disciplined global perspective." />
-  <meta property="og:image" content="preview-og.jpg" />
-  <meta property="og:type" content="website" />
+    <!-- Open Graph / Social Preview -->
+    <meta property="og:title" content="GlobalVision Wealth Management" />
+    <meta property="og:description"
+        content="Strategic wealth management and growth-oriented investment with a disciplined global perspective." />
+    <meta property="og:image" content="preview-og.jpg" />
+    <meta property="og:type" content="website" />
 
-  <style>
-    :root{
-      --dark:#0c1622;
-      --dark-soft:#111c2a;
-      --light:#f4f6f9;
-      --gray:#7a8699;
-      --accent:#c9a24d;
-      --max-width:1200px;
-    }
+    <style>
+        :root {
+            --dark: #0c1622;
+            --dark-soft: #111c2a;
+            --light: #f4f6f9;
+            --gray: #7a8699;
+            --accent: #c9a24d;
+            --max-width: 1200px;
+        }
 
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
-      background:var(--dark);
-      color:#fff;
-      line-height:1.7;
-    }
+        * {
+            box-sizing: border-box
+        }
 
-    h1,h2,h3{font-weight:500;letter-spacing:0.3px}
-    p{color:#d0d4dc}
+        html {
+            scroll-behavior: smooth;
+        }
 
-    section{
-      padding:100px 24px;
-    }
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background: var(--dark);
+            color: #fff;
+            line-height: 1.7;
+        }
 
-    .container{
-      max-width:var(--max-width);
-      margin:auto;
-    }
+        h1,
+        h2,
+        h3 {
+            font-weight: 500;
+            letter-spacing: 0.3px
+        }
 
-    /* HERO */
-    .hero{
-      position:relative;
-      height:100vh;
-      overflow:hidden;
-    }
-    .hero video{
-  position:absolute;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  opacity:0.45;
-  filter: blur(6px);
-  transform: scale(1.05); /* prevents edge gaps caused by blur */
-}
+        p {
+            color: #d0d4dc
+        }
 
-    .hero-content{
-      position:relative;
-      z-index:2;
-      height:100%;
-      display:flex;
-      align-items:center;
-    }
-    .hero h1{
-      font-size:46px;
-      max-width:700px;
-    }
-    .hero p{
-      max-width:620px;
-      font-size:18px;
-    }
+        section {
+            padding: 100px 24px;
+        }
 
-    /* GRID */
-    .grid-3{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:40px;
-    }
+        .container {
+            max-width: var(--max-width);
+            margin: auto;
+        }
 
-    .card{
-      background:var(--dark-soft);
-      padding:32px;
-      border-radius:8px;
-    }
+        /* HERO */
+        .hero {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
 
-    .image-block{
-      width:100%;
-      height:260px;
-      object-fit:cover;
-      border-radius:6px;
-      margin-bottom:24px;
-    }
+        .hero video {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.45;
+            filter: blur(6px);
+            transform: scale(1.05);
+            /* prevents edge gaps caused by blur */
+        }
 
-    footer{
-      padding:60px 24px;
-      text-align:center;
-      color:var(--gray);
-      border-top:1px solid #1e2a3a;
-    }
-    /* LEADERSHIP – REFINED EXECUTIVE LAYOUT */
-.leadership-grid{
-  display:grid;
-  grid-template-columns: 1fr 360px 1fr;
-  gap:40px;
-  align-items:center;
-}
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
 
-.leadership-text{
-  background:var(--dark-soft);
-  padding:32px;
-  border-radius:8px;
-}
+        .hero h1 {
+            font-size: 46px;
+            max-width: 700px;
+        }
 
-.leadership-center{
-  text-align:center;
-}
+        .hero p {
+            max-width: 620px;
+            font-size: 18px;
+        }
 
-.leadership-center img{
-  width:100%;
-  height:440px;
-  object-fit:cover;
-  border-radius:8px;
-  margin-bottom:16px;
-}
+        /* GRID */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
 
-.leader-name{
-  font-size:20px;
-  margin:0;
-}
+        .card {
+            background: var(--dark-soft);
+            padding: 32px;
+            border-radius: 8px;
+        }
 
-.leader-title{
-  color:var(--gray);
-  margin:4px 0 0;
-}
+        .image-block {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 24px;
+        }
 
-/* Responsive */
-@media (max-width: 900px){
-  .leadership-grid{
-    grid-template-columns:1fr;
-    text-align:center;
-  }
+        footer {
+            padding: 60px 24px;
+            text-align: center;
+            color: var(--gray);
+            border-top: 1px solid #1e2a3a;
+        }
 
-  .leadership-center img{
-    height:360px;
-  }
-}
+        /* CTA BUTTON */
+        .btn-cta {
+            display: inline-block;
+            padding: 14px 32px;
+            background: var(--accent);
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            margin-top: 24px;
+            transition: transform 0.2s, background 0.2s;
+        }
 
+        .btn-cta:hover {
+            background: #dbc07d;
+            transform: translateY(-2px);
+        }
 
-  </style>
+        /* LEADERSHIP – REFINED EXECUTIVE LAYOUT */
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: 1fr 360px 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .leadership-text {
+            background: var(--dark-soft);
+            padding: 32px;
+            border-radius: 8px;
+        }
+
+        .leadership-center {
+            text-align: center;
+        }
+
+        .leadership-center img {
+            width: 100%;
+            height: 440px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+
+        .leader-name {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        .leader-title {
+            color: var(--gray);
+            margin: 4px 0 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .leadership-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .leadership-center img {
+                height: 360px;
+            }
+        }
+
+        /* CONTACT FORM */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .contact-form {
+            background: var(--dark-soft);
+            padding: 40px;
+            border-radius: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            background: #1a2635;
+            border: 1px solid #2d3e50;
+            border-radius: 4px;
+            color: #fff;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 14px;
+            background: var(--accent);
+            color: var(--dark);
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn-submit:hover {
+            background: #dbc07d;
+        }
+
+        /* LISTS */
+        .content-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .content-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 12px;
+            color: #d0d4dc;
+        }
+
+        .content-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        @media (max-width: 800px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <video autoplay muted loop playsinline>
-    <source src="video/Hero.mp4" type="video/mp4">
-  </video>
+    <!-- HERO -->
+    <section class="hero">
+        <video autoplay muted loop playsinline>
+            <source src="Hero.mp4" type="video/mp4">
+        </video>
 
-  <div class="hero-content container">
-    <div>
-      <h1>GlobalVision Wealth Management</h1>
-      <p>
-        Strategic wealth management and growth-oriented investment, guided by
-        disciplined risk control, global perspective, and long-term capital stewardship.
-      </p>
-    </div>
-  </div>
-</section>
+        <div class="hero-content container">
+            <div>
+                <h1>GlobalVision Wealth Management</h1>
+                <h2 style="font-size: 28px; color: var(--accent); margin-top: 10px;">Strategic Wealth Stewardship &
+                    Long-Term Growth Investing</h2>
+                <p>
+                    We provide disciplined wealth management solutions designed to preserve capital, manage risk, and
+                    generate sustainable long-term growth across global markets.
+                </p>
+                <a href="#contact" class="btn-cta">Schedule a Consultation</a>
+            </div>
+        </div>
+    </section>
 
-<!-- CORE STRENGTHS -->
-<section>
-  <div class="container">
-    <h2>Core Strengths</h2>
+    <!-- CORE STRENGTHS -->
+    <section id="strengths">
+        <div class="container">
+            <h2>Our Core Strengths</h2>
 
-    <div class="grid-3">
-      <div class="card">
-        <img src="image/strengths-asset-management.jpg" class="image-block" alt="Asset Management">
-        <h3>Stable Asset Management & Long-Term Optimization</h3>
-        <p>
-          We focus on preserving capital while optimizing long-term returns through
-          disciplined allocation, avoiding excessive leverage and short-term speculation.
-        </p>
-      </div>
+            <div class="grid-3">
+                <div class="card">
+                    <img src="strengths-asset-management.jpg" class="image-block" alt="Asset Management">
+                    <h3>1. Disciplined Asset Management & Long-Term Value Creation</h3>
+                    <p>At GlobalVision, capital preservation comes before return generation.</p>
+                    <p>We focus on building resilient portfolios designed to withstand market cycles rather than chasing
+                        short-term performance.</p>
+                    <ul class="content-list">
+                        <li>Long-term capital stewardship</li>
+                        <li>Fundamental analysis over speculation</li>
+                        <li>Structural opportunities instead of market noise</li>
+                    </ul>
+                </div>
 
-      <div class="card">
-        <img src="image/strengths-global-perspective.jpg" class="image-block" alt="Global Perspective">
-        <h3>Global Perspective & Structural Opportunities</h3>
-        <p>
-          Our investment framework evaluates opportunities across traditional and
-          emerging markets, including digital infrastructure and blockchain-enabled assets.
-        </p>
-      </div>
+                <div class="card">
+                    <img src="strengths-risk-diversification.jpg" class="image-block" alt="Risk Management">
+                    <h3>2. Institutional-Grade Risk Management Framework</h3>
+                    <p>Risk is not volatility — it is permanent capital loss.</p>
+                    <p>We apply institutional-level risk controls, stress testing, and scenario analysis to ensure
+                        portfolios remain robust under diverse market conditions, including periods of liquidity stress
+                        and macroeconomic uncertainty.</p>
+                </div>
 
-      <div class="card">
-        <img src="image/strengths-risk-diversification.jpg" class="image-block" alt="Risk Diversification">
-        <h3>Diversification & Risk Preference Alignment</h3>
-        <p>
-          Portfolio construction is tailored to individual risk preferences, combining
-          conventional assets with selectively allocated high-growth sectors such as
-          digital assets and decentralized technologies.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+                <div class="card">
+                    <img src="strengths-global-perspective.jpg" class="image-block" alt="Portfolio Construction">
+                    <h3>3. Diversified Portfolio Construction Aligned With Risk Preferences</h3>
+                    <p>Every investor has a different risk tolerance, time horizon, and objective.</p>
+                    <p>We design customized, diversified portfolios that integrate:</p>
+                    <ul class="content-list">
+                        <li>Traditional assets (equities, fixed income, alternatives)</li>
+                        <li>Select digital assets and emerging financial instruments</li>
+                        <li>Defensive strategies tailored to downside protection</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- ABOUT -->
-<section>
-  <div class="container">
-    <h2>About Us</h2>
-    <img src="image/AboutUs.jpg" class="image-block" alt="About Us">
-    <p>
-      GlobalVision Wealth Management was established to serve clients seeking
-      disciplined capital growth beyond traditional boundaries. Our philosophy
-      is rooted in responsibility, long-term thinking, and adaptive investment
-      strategies aligned with global economic transformation.
-    </p>
-    <p>
-      We believe that modern wealth management must integrate traditional asset
-      classes with innovative financial structures, including blockchain-based
-      investment frameworks, while maintaining rigorous governance standards.
-    </p>
-  </div>
-</section>
-  
-<!-- OUR LEADERSHIP -->
-<section>
-  <div class="container">
-    <h2>Our Leadership</h2>
+    <!-- SERVICES -->
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <h3>Wealth Management & Portfolio Advisory</h3>
 
-    <div class="leadership-grid">
+            <div class="grid-3">
+                <div class="card">
+                    <img src="services-portfolio-management.jpg" class="image-block" alt="Portfolio Management">
+                    <h3>Wealth Management & Portfolio Advisory</h3>
+                    <ul class="content-list">
+                        <li>Customized portfolio construction</li>
+                        <li>Risk-based asset allocation</li>
+                        <li>Ongoing portfolio monitoring and rebalancing</li>
+                    </ul>
+                </div>
 
-      <!-- LEFT TEXT -->
-      <div class="leadership-text">
-        <p>
-          With over three decades of experience in global asset management, risk
-          management, and portfolio construction, Ethan has held senior roles at
-          international financial institutions across Singapore, Hong Kong,
-          London, and New York.
-        </p>
-      </div>
+                <div class="card">
+                    <img src="services-asset-allocation.jpg" class="image-block" alt="Global Asset Allocation">
+                    <h3>Global Asset Allocation</h3>
+                    <ul class="content-list">
+                        <li>Equities, fixed income, and alternative investments</li>
+                        <li>Cross-border investment strategies</li>
+                        <li>Currency and macro risk considerations</li>
+                    </ul>
+                </div>
 
-      <!-- CENTER IMAGE + NAME -->
-      <div class="leadership-center">
-        <img src="image/Ethan.jpg" alt="Ethan Lim">
-        <p class="leader-name"><strong>Ethan Lim</strong></p>
-        <p class="leader-title">Founder & Chief Investment Officer</p>
-      </div>
+                <div class="card">
+                    <img src="services-risk-management.jpg" class="image-block" alt="Digital Advisory">
+                    <h3>Digital Asset & Emerging Finance Advisory</h3>
+                    <ul class="content-list">
+                        <li>Strategic exposure to digital assets</li>
+                        <li>Infrastructure-focused blockchain investments</li>
+                        <li>Risk-managed integration with traditional portfolios</li>
+                    </ul>
+                </div>
 
-      <!-- RIGHT TEXT -->
-      <div class="leadership-text">
-        <p>
-          His expertise spans institutional asset allocation, portfolio risk
-          management, strategic investment advisory, and digital asset integration.
-          Ethan founded GlobalVision to deliver disciplined, transparent, and
-          long-term capital stewardship.
-        </p>
-      </div>
+                <div class="card">
+                    <img src="strengths-asset-management.jpg" class="image-block" alt="Family Office">
+                    <h3>Family Office & High-Net-Worth Advisory</h3>
+                    <ul class="content-list">
+                        <li>Long-term wealth structuring</li>
+                        <li>Intergenerational capital planning</li>
+                        <li>Governance and investment oversight</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    </div>
-  </div>
-</section>
-<!-- INVESTMENT & ADVISORY TEAM -->
-<section>
-  <div class="container">
-    <h2>Investment & Advisory Team</h2>
+    <!-- CLIENTS & CASE EXPERIENCE -->
+    <section id="clients">
+        <div class="container">
+            <h2>Clients & Case Experience</h2>
 
-    <div class="card">
-      <p>
-        Our team consists of professionals with backgrounds in global asset
-        management firms, investment banks, risk analytics, and regulatory
-        frameworks.
-      </p>
+            <h3>Our Clients</h3>
+            <p>We work with:</p>
+            <ul class="content-list">
+                <li>High-net-worth individuals</li>
+                <li>Family offices</li>
+                <li>Entrepreneurs and senior executives</li>
+                <li>Institutional and professional investors</li>
+            </ul>
 
-      <p>
-        Each investment decision is evaluated through rigorous analysis,
-        scenario testing, and governance standards to ensure alignment with
-        client objectives and risk profiles.
-      </p>
-    </div>
-  </div>
-</section>
+            <h3 style="margin-top: 40px;">Case Experience</h3>
+            <p>While client confidentiality remains paramount, our experience includes:</p>
 
+            <div class="grid-3">
+                <div class="card">
+                    <img src="case-long-term-capital-growth.jpg" class="image-block" alt="Defensive Portfolio">
+                    <p>Designing defensive portfolios during market downturns</p>
+                </div>
 
+                <div class="card">
+                    <img src="case-multi-asset-portfolio.jpg" class="image-block" alt="Alternative Assets">
+                    <p>Integrating alternative and digital assets into conservative portfolios</p>
+                </div>
 
-<!-- SERVICES -->
-<section>
-  <div class="container">
-    <h2>Our Services</h2>
+                <div class="card">
+                    <img src="2.jpg" class="image-block" alt="Liquidity Transition">
+                    <p>Supporting clients through major liquidity and allocation transitions</p>
+                </div>
+            </div>
 
-    <div class="grid-3">
-      <div class="card">
-        <img src="image/services-asset-allocation.jpg" class="image-block" alt="Strategic Asset Allocation">
-        <h3>Strategic Asset Allocation</h3>
-        <p>
-          Comprehensive allocation across equities, fixed income, alternatives,
-          and emerging digital assets, aligned with long-term objectives.
-        </p>
-      </div>
+            <p style="margin-top: 30px; font-style: italic; color: var(--gray);">
+                Our focus is not performance marketing, but consistent execution and trust.
+            </p>
+        </div>
+    </section>
 
-      <div class="card">
-        <img src="image/services-portfolio-management.jpg" class="image-block" alt="Portfolio Management">
-        <h3>Portfolio Management</h3>
-        <p>
-          Active oversight and disciplined rebalancing designed to navigate
-          evolving market cycles while controlling downside exposure.
-        </p>
-      </div>
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <img src="AboutUs.jpg" class="image-block" alt="Our Story">
+            <h3>Our Story</h3>
+            <p>
+                GlobalVision Wealth Management was founded on the belief that sustainable wealth is built through
+                discipline, clarity, and long-term perspective.
+            </p>
+            <p>
+                Our founding team brings decades of experience from global financial institutions, asset management
+                firms, and investment advisory roles across Asia, Europe, and North America.
+            </p>
+            <p>
+                Having navigated multiple market cycles — including financial crises, regulatory shifts, and
+                technological disruption — we understand that enduring success comes not from prediction, but from
+                preparation.
+            </p>
+            <p>GlobalVision was established to bridge:</p>
+            <ul class="content-list">
+                <li>Traditional wealth management principles</li>
+                <li>Modern asset classes and financial innovation</li>
+                <li>Global opportunities with prudent risk oversight</li>
+            </ul>
+        </div>
+    </section>
 
-      <div class="card">
-        <img src="image/services-risk-management.jpg" class="image-block" alt="Risk & Digital Asset Advisory">
-        <h3>Risk & Digital Asset Advisory</h3>
-        <p>
-          Advisory on blockchain-related investments, custody frameworks,
-          and exposure control within a diversified portfolio structure.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- OUR LEADERSHIP -->
+    <section id="team">
+        <div class="container">
+            <h2>Core Team</h2>
+            <h3>Our Leadership</h3>
 
-<!-- CLIENTS & CASE EXPERIENCE -->
-<section>
-  <div class="container">
-    <h2>Clients & Case Experience</h2>
+            <div class="leadership-grid">
+                <!-- LEFT TEXT -->
+                <div class="leadership-text">
+                    <p>
+                        With over three decades of experience in global asset management, risk management, and portfolio
+                        construction, Ethan has held senior roles at international financial institutions across
+                        Singapore, Hong Kong, London, and New York.
+                    </p>
+                    <ul class="content-list">
+                        <li>Institutional asset allocation</li>
+                        <li>Portfolio risk management</li>
+                        <li>Strategic investment advisory</li>
+                        <li>Digital asset strategy and integration</li>
+                    </ul>
+                </div>
 
-    <h3>Our Clients</h3>
-    <p>
-      We work with a select group of clients who value disciplined strategy,
-      transparency, and long-term thinking.
-    </p>
-    <p>
-      Our client base includes high-net-worth individuals, family offices,
-      entrepreneurs, senior executives, and professional investors seeking
-      globally diversified and risk-managed portfolios.
-    </p>
+                <!-- CENTER IMAGE + NAME -->
+                <div class="leadership-center">
+                    <img src="Ethan.jpg" alt="Ethan Lim">
+                    <p class="leader-name"><strong>Ethan Lim</strong></p>
+                    <p class="leader-title">Founder & Chief Investment Officer</p>
+                </div>
 
-    <div class="grid-3">
-      <div class="card">
-        <img src="image/case-defensive-portfolio.jpg" class="image-block" alt="Defensive Portfolio">
-        <p>
-          Designing defensive, multi-asset portfolios during periods of heightened
-          market volatility and economic uncertainty, prioritizing capital
-          preservation and downside protection.
-        </p>
-      </div>
+                <!-- RIGHT TEXT -->
+                <div class="leadership-text">
+                    <p>
+                        Ethan founded GlobalVision to deliver an investment philosophy centered on discipline,
+                        transparency, and long-term capital stewardship.
+                    </p>
+                </div>
+            </div>
 
-      <div class="card">
-        <img src="image/case-alternative-assets.jpg" class="image-block" alt="Alternative Assets">
-        <p>
-          Integrating alternative and digital assets into conservative portfolios
-          through controlled allocation, risk limits, and institutional-grade
-          custody frameworks.
-        </p>
-      </div>
+            <h3 style="margin-top: 60px;">Investment & Advisory Team</h3>
+            <div class="card">
+                <p>Our team consists of professionals with backgrounds in:</p>
+                <ul class="content-list">
+                    <li>Global asset management firms</li>
+                    <li>Investment banks and financial institutions</li>
+                    <li>Risk analytics and portfolio modeling</li>
+                    <li>Compliance and regulatory frameworks</li>
+                </ul>
+                <p>
+                    Each team member contributes deep expertise in their respective domain, ensuring that every
+                    investment decision is thoroughly evaluated from both opportunity and risk perspectives.
+                </p>
+            </div>
+        </div>
+    </section>
 
-      <div class="card">
-        <img src="image/case-liquidity-transition.jpg" class="image-block" alt="Liquidity Transition">
-        <p>
-          Supporting clients through major liquidity events and allocation
-          transitions with structured planning, risk assessment, and long-term
-          capital deployment strategies.
-        </p>
-      </div>
-    </div>
+    <section id="philanthropy">
+        <div class="container">
+            <h2>Philanthropy & Responsibility</h2>
+            <h3>Beyond Capital</h3>
+            <img src="philanthropy-community.jpg" class="image-block" alt="Beyond Capital">
+            <p>
+                GlobalVision believes that long-term wealth carries social responsibility.
+            </p>
+            <p>We actively support and collaborate with philanthropic initiatives focused on:</p>
+            <ul class="content-list">
+                <li>Education access and development</li>
+                <li>Healthcare and community well-being</li>
+                <li>Financial literacy and inclusion</li>
+            </ul>
+            <p style="color: var(--gray); font-size: 14px;">
+                Our firm maintains a clear separation between investment activities and charitable initiatives while
+                ensuring transparency, governance, and accountability.
+            </p>
+        </div>
+    </section>
 
-    <p>
-      Client confidentiality remains paramount. Our focus is not performance
-      marketing, but consistent execution, governance, and trust built over time.
-    </p>
-  </div>
-</section>
+    <!-- CAREERS -->
+    <section id="careers">
+        <div class="container">
+            <h2>Join Us</h2>
+            <h3>Careers at GlobalVision</h3>
+            <img src="careers-team-culture.jpg" class="image-block">
+            <p>We seek professionals who value:</p>
+            <ul class="content-list">
+                <li>Integrity and intellectual rigor</li>
+                <li>Long-term thinking over short-term incentives</li>
+                <li>Responsibility toward client capital</li>
+            </ul>
+            <p>Open roles may include:</p>
+            <ul class="content-list">
+                <li>Investment research</li>
+                <li>Portfolio analysis</li>
+                <li>Risk management</li>
+                <li>Client advisory</li>
+            </ul>
+            <p>If you are motivated by discipline and purpose, we welcome your interest.</p>
+        </div>
+    </section>
 
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <h3>Get in Touch</h3>
 
-<!-- PHILANTHROPY -->
-<section>
-  <div class="container">
-    <h2>Philanthropy & Responsibility</h2>
-    <img src="image/philanthropy-community.jpg" class="image-block" alt="Philanthropy & Community">
-    <p>
-      We believe long-term capital stewardship includes social responsibility.
-      GlobalVision supports initiatives in education, healthcare, and community
-      development through structured philanthropic engagement.
-    </p>
-  </div>
-</section>
+            <div class="contact-grid">
+                <div>
+                    <img src="contact-global-office.jpg" class="image-block" alt="Global Office Contact">
+                    <p>For general inquiries or partnership discussions, please contact us:</p>
+                    <p><strong>📍 Offices:</strong> Singapore | Hong Kong | Global</p>
+                    <p><strong>📧 Email:</strong> info@globalvisionwm.com</p>
+                    <p style="margin-top: 20px; color: var(--accent);"><strong>📞 By appointment only</strong></p>
+                    <p style="margin-top: 20px; font-style: italic;">We believe meaningful conversations begin with
+                        trust and clarity.</p>
+                </div>
 
-<!-- CAREERS -->
-<section>
-  <div class="container">
-    <h2>Careers</h2>
-    <img src="careers-team-culture.jpg" class="image-block">
-    <p>
-      We seek individuals with long-term thinking, intellectual rigor, and
-      a disciplined approach to capital management.
-    </p>
-  </div>
-</section>
+                <div class="contact-form">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea rows="5" placeholder="How can we help you?"></textarea>
+                    </div>
+                    <button class="btn-submit" onclick="submitForm()">Submit Request</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- CONTACT -->
-<section>
-  <div class="container">
-    <h2>Contact Us</h2>
-    <img src="image/contact-global-office.jpg" class="image-block" alt="Global Office Contact">
-    <p>
-      For strategic discussions and long-term partnership inquiries, please
-      contact us through appropriate professional channels.
-    </p>
-  </div>
-</section>
+    <script>
+        function submitForm() {
+            alert("Thank you for your interest. A GlobalVision advisor will reach out to you within 24 hours to schedule your consultation.");
+        }
+    </script>
 
-<footer>
-  © GlobalVision Capital Management. All rights reserved.
-</footer>
+    <footer>
+        © GlobalVision Capital Management. All rights reserved.
+    </footer>
 
 </body>
-</html>
 
+</html>
