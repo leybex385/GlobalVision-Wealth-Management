@@ -637,6 +637,57 @@
                 grid-template-columns: 1fr;
             }
         }
+        /* HAMBURGER */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  margin: 6px 0;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+/* MOBILE NAV */
+@media (max-width: 900px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: rgba(12, 22, 34, 0.98);
+    flex-direction: column;
+    gap: 0;
+    display: none;
+    border-bottom: 1px solid #1e2a3a;
+  }
+
+  .nav-links li {
+    text-align: center;
+    border-top: 1px solid #1e2a3a;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 18px;
+    font-size: 15px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
     </style>
 </head>
 
@@ -646,6 +697,11 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="nav-brand">GlobalVision Wealth Management</a>
+            <button class="hamburger" aria-label="Toggle navigation">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
             <ul class="nav-links">
                 <li><a href="#strengths">Strengths</a></li>
                 <li><a href="#philosophy">Philosophy</a></li>
@@ -1208,6 +1264,35 @@
             </div>
         </div>
     </footer>
+<script>
+  function submitForm() {
+    alert("Thank you for your interest. A GlobalVision advisor will reach out to you within 24 hours to schedule your consultation.");
+  }
+
+  // Scroll animations
+  const observerOptions = { threshold: 0.1 };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('active');
+    });
+  }, observerOptions);
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // HAMBURGER MENU
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  // Close menu on link click
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+    });
+  });
+</script>
 
 </body>
 
