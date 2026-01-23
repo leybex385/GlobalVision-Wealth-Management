@@ -1263,6 +1263,7 @@
         </div>
     </footer>
 <script>
+  // Contact form
   function submitForm() {
     alert("Thank you for your interest. A GlobalVision advisor will reach out to you within 24 hours to schedule your consultation.");
   }
@@ -1271,13 +1272,15 @@
   const observerOptions = { threshold: 0.1 };
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add('active');
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
     });
   }, observerOptions);
+
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-
-  <script>
+  // Hamburger menu
   const hamburger = document.querySelector('.hamburger');
   const navLinks = document.querySelector('.nav-links');
 
@@ -1293,6 +1296,7 @@
     });
   }
 </script>
+
 
 </body>
 
