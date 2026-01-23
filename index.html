@@ -120,53 +120,6 @@
                 /* Simple mobile approach: hide links for now or use a hamburger */
             }
         }
-        /* HAMBURGER MENU */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 6px;
-    cursor: pointer;
-}
-
-.hamburger span {
-    width: 24px;
-    height: 2px;
-    background: #fff;
-    transition: all 0.3s ease;
-}
-
-/* MOBILE NAVIGATION */
-@media (max-width: 900px) {
-
-    .hamburger {
-        display: flex;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: rgba(12, 22, 34, 0.98);
-        backdrop-filter: blur(10px);
-        flex-direction: column;
-        align-items: center;
-        gap: 24px;
-        padding: 40px 0;
-        border-bottom: 1px solid #1e2a3a;
-
-        /* IMPORTANT */
-        display: none;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links a {
-        font-size: 16px;
-    }
-}
 
         /* SCROLL OFFSET */
         section {
@@ -690,29 +643,19 @@
 <body>
 
     <!-- NAVIGATION -->
-
-<nav class="navbar">
-    <div class="nav-container">
-        <a href="#" class="nav-brand">GlobalVision Wealth Management</a>
-
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#strengths">Strengths</a></li>
-            <li><a href="#philosophy">Philosophy</a></li>
-            <li><a href="#who-we-serve">Who We Serve</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#contact">Consultation</a></li>
-        </ul>
-
-        <!-- Hamburger -->
-        <div class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-brand">GlobalVision Wealth Management</a>
+            <ul class="nav-links">
+                <li><a href="#strengths">Strengths</a></li>
+                <li><a href="#philosophy">Philosophy</a></li>
+                <li><a href="#who-we-serve">Who We Serve</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Consultation</a></li>
+            </ul>
         </div>
-    </div>
-</nav>
-
+    </nav>
 
     <!-- HERO -->
     <section class="hero">
@@ -1246,11 +1189,6 @@
         }, observerOptions);
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-        <script>
-function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("active");
-}
-
     </script>
 
     <footer>
